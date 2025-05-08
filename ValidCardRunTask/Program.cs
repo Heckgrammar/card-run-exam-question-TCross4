@@ -18,7 +18,21 @@
             int[] cards = dealCards();
             bool gameWon = false;
             // add your code here
-
+            while (gameWon == false)
+            {
+                for (int i = 0; i < 100; i++)
+                {
+                    if (hand[i + 1] == hand[i] + 1 &&
+                    hand[i + 2] == hand[i + 1]+ 1 && 
+                    hand[i + 3] == hand[i + 2] + 1 && 
+                    hand[i + 4] == hand[i + 3] + 1 && 
+                    hand[i + 5] == hand[i + 4] + 1)
+                    {
+                        gameWon = true; 
+                    }
+                }
+            }
+            Console.WriteLine("Game won.");
 
             // end of your code
             Console.WriteLine(gameWon);
